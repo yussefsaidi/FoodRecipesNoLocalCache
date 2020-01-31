@@ -42,7 +42,7 @@ public class RecipeListActivity extends BaseActivity {
         RecipeApi recipeApi = ServiceGenerator.getRecipeApi();
 
 //        Call<RecipeSearchResponse> responseCall = recipeApi
-//                .searchRecipe(Constants.API_KEY, "chicken", "1");
+//                .searchRecipe("chicken", "1");
 //
 //        responseCall.enqueue(new Callback<RecipeSearchResponse>() {
 //            @Override
@@ -71,7 +71,7 @@ public class RecipeListActivity extends BaseActivity {
 //        });
 
         Call<RecipeResponse> responseCall = recipeApi
-                .getRecipe(Constants.API_KEY, "c79d26");
+                .getRecipe("c79d26");
 
         responseCall.enqueue(new Callback<RecipeResponse>() {
 

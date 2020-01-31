@@ -7,7 +7,7 @@ import com.saidiyussef.foodrecipes.models.Recipe;
 public class RecipeResponse {
 
     @SerializedName("recipe")
-    @Expose
+    @Expose()
     private Recipe recipe;
 
     public Recipe getRecipe(){
