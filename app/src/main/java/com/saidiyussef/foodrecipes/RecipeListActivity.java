@@ -1,6 +1,8 @@
 package com.saidiyussef.foodrecipes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +14,7 @@ import com.saidiyussef.foodrecipes.requests.ServiceGenerator;
 import com.saidiyussef.foodrecipes.requests.responses.RecipeResponse;
 import com.saidiyussef.foodrecipes.requests.responses.RecipeSearchResponse;
 import com.saidiyussef.foodrecipes.util.Constants;
+import com.saidiyussef.foodrecipes.viewmodels.RecipeListViewModel;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,16 +27,24 @@ import retrofit2.Response;
 public class RecipeListActivity extends BaseActivity {
 
     private static final String TAG = "RecipeListActivity";
+
+    private RecipeListViewModel mRecipeListViewModel;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_list);
 
-        findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
+        mRecipeListViewModel = new ViewModelProvider(this).get(RecipeListViewModel.class);
+
+        subscribeObservers();
+    }
+
+    private void subscribeObservers(){
+        mRecipeListViewModel.getRecipes().observe(this, new Observer<List<Recipe>>() {
             @Override
-            public void onClick(View view) {
-               testRetrofitRequest();
+            public void onChanged(List<Recipe> recipes) {
+
             }
         });
     }
