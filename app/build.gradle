@@ -26,6 +26,7 @@ android {
 dependencies {
     def retrofitVersion = "2.7.1"
     def lifecycle_version = "2.2.0"
+    def glideVersion = "4.11.0"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -48,5 +49,13 @@ dependencies {
 
     // RecyclerView
     implementation "androidx.cardview:cardview:1.0.0"
+
+    //Design support for toolbars
+    implementation 'com.google.android.material:material:1.0.0'
+
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
 
 }
