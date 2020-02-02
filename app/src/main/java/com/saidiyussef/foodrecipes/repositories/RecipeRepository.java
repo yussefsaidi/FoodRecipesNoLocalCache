@@ -20,11 +20,14 @@ public class RecipeRepository {
         return instance;
     }
 
-    private RecipeRepository(){
-        mRecipeApiClient = RecipeApiClient.getInstance();
-    }
+    private RecipeRepository(){ mRecipeApiClient = RecipeApiClient.getInstance(); }
 
-    public LiveData<List<Recipe>> getRecipes(){
-        return mRecipeApiClient.getRecipes();
+    public LiveData<List<Recipe>> getRecipes(){ return mRecipeApiClient.getRecipes(); }
+
+    public void searchRecipesApi(String query, int pageNumber){
+        if(pageNumber == 0){
+            pageNumber =1;
+        }
+        mRecipeApiClient.searchRecipesApi(query, pageNumber);
     }
 }
