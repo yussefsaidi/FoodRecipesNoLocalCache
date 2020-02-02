@@ -44,5 +44,5 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
     implementation "androidx.cardview:cardview:1.0.0"
-    
+
 }
