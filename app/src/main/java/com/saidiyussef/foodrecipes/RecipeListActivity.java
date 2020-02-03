@@ -11,6 +11,7 @@ import com.saidiyussef.foodrecipes.adapters.OnRecipeListener;
 import com.saidiyussef.foodrecipes.adapters.RecipeRecyclerAdapter;
 import com.saidiyussef.foodrecipes.models.Recipe;
 import com.saidiyussef.foodrecipes.util.Testing;
+import com.saidiyussef.foodrecipes.util.VerticalSpacingItemDecorator;
 import com.saidiyussef.foodrecipes.viewmodels.RecipeListViewModel;
 import java.util.List;
 
@@ -34,6 +35,10 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
         initRecyclerView();
         subscribeObservers();
         initSearchView();
+        if(!mRecipeListViewModel.isViewingRecipes()){
+            // Display categories
+            displayCategories();
+        }
 
     }
 
@@ -53,6 +58,8 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
         mAdapter = new RecipeRecyclerAdapter(this);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(30);
+        mRecyclerView.addItemDecoration(itemDecorator);
     }
 
     private void searchRecipesApi(String query, int pageNumber){
@@ -83,6 +90,12 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
 
     @Override
     public void onCategoryClick(String category) {
+        mAdapter.displayLoading();
+        mRecipeListViewModel.searchRecipesApi(category, 1);
+    }
 
+    private void displayCategories(){
+        mRecipeListViewModel.setIsViewingRecipes(false);
+        mAdapter.displayCategories();
     }
 }
