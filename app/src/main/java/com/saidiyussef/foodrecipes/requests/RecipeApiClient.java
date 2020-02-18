@@ -109,8 +109,14 @@ public class RecipeApiClient {
         }
         
         private void cancelRequest(){
-            Log.d(TAG, "cancelRequest: cancelling the search request.");
+            Log.d(TAG, "cancelRequest: canceling the search request.");
             cancelRequest = true;
+        }
+    }
+
+    public void cancelRequest(){
+        if(mRetrieveRecipesRunnable != null){
+            mRetrieveRecipesRunnable.cancelRequest();
         }
     }
 }
