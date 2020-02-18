@@ -1,5 +1,6 @@
 package com.saidiyussef.foodrecipes.adapters;
 
+import android.view.GestureDetector;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,7 +11,9 @@ import com.saidiyussef.foodrecipes.R;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class CategoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public class CategoryViewHolder extends RecyclerView.ViewHolder implements
+        View.OnClickListener
+{
 
     CircleImageView categoryImage;
     TextView categoryTitle;
