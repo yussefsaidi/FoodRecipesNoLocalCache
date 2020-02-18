@@ -1,11 +1,15 @@
 package com.saidiyussef.foodrecipes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.saidiyussef.foodrecipes.adapters.OnRecipeListener;
 import com.saidiyussef.foodrecipes.adapters.RecipeRecyclerAdapter;
@@ -41,6 +45,17 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
             // Display categories
             displayCategories();
         }
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.recipe_search_menu);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId() == R.id.action_categories){
+                    displayCategories();
+                }
+                return false;
+            }
+        });
 
     }
 
