@@ -29,7 +29,6 @@ public class RecipeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     private OnRecipeListener mOnRecipeListener;
 
     public RecipeRecyclerAdapter(OnRecipeListener mOnRecipeListener) {
-        this.mRecipes = mRecipes;
         this.mOnRecipeListener = mOnRecipeListener;
     }
 
