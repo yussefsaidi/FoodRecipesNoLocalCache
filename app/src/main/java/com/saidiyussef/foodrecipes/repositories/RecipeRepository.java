@@ -26,8 +26,12 @@ public class RecipeRepository {
 
     public void searchRecipesApi(String query, int pageNumber){
         if(pageNumber == 0){
-            pageNumber =1;
+            pageNumber = 1;
         }
         mRecipeApiClient.searchRecipesApi(query, pageNumber);
+    }
+
+    public void cancelRequest(){
+        mRecipeApiClient.cancelRequest();
     }
 }
