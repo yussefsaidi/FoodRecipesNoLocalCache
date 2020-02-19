@@ -1,7 +1,6 @@
 package com.saidiyussef.foodrecipes.repositories;
 
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import com.saidiyussef.foodrecipes.models.Recipe;
 import com.saidiyussef.foodrecipes.requests.RecipeApiClient;
@@ -25,6 +24,8 @@ public class RecipeRepository {
     private RecipeRepository(){ mRecipeApiClient = RecipeApiClient.getInstance(); }
 
     public LiveData<List<Recipe>> getRecipes(){ return mRecipeApiClient.getRecipes(); }
+    public LiveData<Recipe> getRecipe(){ return mRecipeApiClient.getRecipe(); }
+
 
     public void searchRecipesApi(String query, int pageNumber){
         if(pageNumber == 0){
@@ -33,6 +34,10 @@ public class RecipeRepository {
         mQuery = query;
         mPageNumber = pageNumber;
         mRecipeApiClient.searchRecipesApi(query, pageNumber);
+    }
+
+    public void searchRecipeById(String recipeId){
+        mRecipeApiClient.searchRecipeById(recipeId);
     }
 
     public void searchNextPage(){
