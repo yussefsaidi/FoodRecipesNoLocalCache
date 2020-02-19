@@ -80,6 +80,16 @@ public class RecipeListActivity extends BaseActivity implements OnRecipeListener
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(30);
         mRecyclerView.addItemDecoration(itemDecorator);
+
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                if(!mRecyclerView.canScrollVertically(1)){
+                    // search next page
+                    mRecipeListViewModel.searchNextPage();
+                }
+            }
+        });
     }
 
     private void initSearchView(){
