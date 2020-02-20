@@ -25,11 +25,11 @@ import retrofit2.Response;
 public class RecipeApiClient {
 
     private MutableLiveData<List<Recipe>> mRecipes;
+    private MutableLiveData<Recipe> mRecipe;
+    private MutableLiveData<Boolean> mRecipeRequestTimeout = new MutableLiveData<>(false);
     private static RecipeApiClient instance;
     private RetrieveRecipesRunnable mRetrieveRecipesRunnable;
     private RetrieveRecipeRunnable mRetrieveRecipeRunnable;
-    private MutableLiveData<Recipe> mRecipe;
-
 
     public static RecipeApiClient getInstance(){
         if(instance == null){
@@ -44,6 +44,8 @@ public class RecipeApiClient {
     }
 
     public LiveData<Recipe> getRecipe() {return mRecipe;}
+
+    public LiveData<Boolean> isRecipeRequestTimedOut() {return mRecipeRequestTimeout;}
 
     public LiveData<List<Recipe>> getRecipes(){
         return mRecipes;
@@ -78,6 +80,7 @@ public class RecipeApiClient {
             @Override
             public void run() {
                 // Let the user know its timed out
+                mRecipeRequestTimeout.postValue(true);
                 handler.cancel(true);
             }
         }, Constants.NETWORK_TIMEOUT, TimeUnit.MILLISECONDS);

@@ -53,11 +53,20 @@ public class RecipeActivity extends BaseActivity {
                 if(recipe != null){
                     if(recipe.getRecipe_id().equals(mRecipeViewModel.getRecipeId()))
                     setRecipeProperties(recipe);
+                    mRecipeViewModel.setRetrievedRecipe(true);
+                }
+            }
+        });
+
+        mRecipeViewModel.isRecipeRequestTimedOut().observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                if(aBoolean && !mRecipeViewModel.didRetrieveRecipe()){
+                    Log.d(TAG, "onChanged: timed out..");
                 }
             }
         });
     }
-
 
     private void getIncomingIntent(){
         if(getIntent().hasExtra("recipe")){

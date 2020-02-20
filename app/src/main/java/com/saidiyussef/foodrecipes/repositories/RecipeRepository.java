@@ -25,6 +25,7 @@ public class RecipeRepository {
 
     public LiveData<List<Recipe>> getRecipes(){ return mRecipeApiClient.getRecipes(); }
     public LiveData<Recipe> getRecipe(){ return mRecipeApiClient.getRecipe(); }
+    public LiveData<Boolean> isRecipeRequestTimedOut(){ return mRecipeApiClient.isRecipeRequestTimedOut(); }
 
 
     public void searchRecipesApi(String query, int pageNumber){
