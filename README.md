@@ -3,9 +3,9 @@ Android app to search for food recipes by ingredient or category.
 
 ## Screenshots
 <p>
-  <img src="/Screenshots/Screenshot_1582252407.png" width="270" height="400"/>
-  <img src="/Screenshots/Screenshot_1582252476.png" width="270" height="400"/>
-  <img src="/Screenshots/Screenshot_1582252452.png" width="270" height="400"/>
+  <img src="/Screenshots/Screenshot_1582252407.png" width="270" height="450"/>
+  <img src="/Screenshots/Screenshot_1582252476.png" width="270" height="450"/>
+  <img src="/Screenshots/Screenshot_1582252452.png" width="270" height="450"/>
 </p>
 
 ## Installation
