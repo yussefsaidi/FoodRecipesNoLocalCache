@@ -13,7 +13,6 @@ A short description of the motivation behind the creation and maintenance of the
 
 ## Technology and libraries
 
-<b>Built with</b>
 - [Android Studio](https://developer.android.com/studio)
 - [Retrofit](https://square.github.io/retrofit/)
 - [Gson](https://github.com/google/gson)
