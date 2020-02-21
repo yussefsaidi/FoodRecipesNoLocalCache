@@ -35,16 +35,10 @@ Describe and show how to run the tests with code examples.
 ## How to use?
 If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
 
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
-
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+Credits to CodingWithMitch for the help in learning to develop an android application using MVVM architecture and Retrofit.
 
-#### Anything else that seems useful
+
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
+© [Yussef Saidi]()
