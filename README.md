@@ -13,8 +13,10 @@ Git clone the repository, import project in Android Studio, and run on an androi
 
 ## Architecture Overview
 This application makes use of the MVVM architectural pattern. 
-Our project follows: Activity -> ViewModel -> Repository -> Client API -> Network.
-Data is retrieved through an API call, stored in LiveData in our 
+Our project follows: Activity -> ViewModel -> Repository -> Remote Data Source -> Retrofit -> Webservice.
+LiveData is retrieved from the Remote Data Source into our repository, then it trickles down all the way to our ViewModel. The activities do not hold data.
+
+TO DO: Adding a local database cache using Room Persistence Library.
 
 ## Technology and libraries
 
