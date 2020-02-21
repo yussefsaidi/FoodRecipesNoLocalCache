@@ -28,8 +28,8 @@ Used to setup a REST API.
 A Java serialization/deserialization library to convert Java Objects into JSON and back 
 - [Glide](https://github.com/bumptech/glide):
 Library to display our recipe/food images.
-<p>- [CircleImageView](https://github.com/hdodenhof/CircleImageView)</p>
-Library used to make circular image views.
+- [CircleImageView](https://github.com/hdodenhof/CircleImageView)
+<p>Library used to make circular image views.</p>
 
 ## API Reference
 
