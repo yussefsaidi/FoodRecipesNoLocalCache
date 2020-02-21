@@ -31,13 +31,16 @@ TO DO: Adding a local database cache using Room Persistence Library.
 - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
 : Library used to make circular image views.
 
-## API Reference
-
-
-
-
 ## Tests
-Describe and show how to run the tests with code examples.
+Test: Select a category by clicking on it. Be able to view the many recipes in a category.
+
+Test: Select a Recipe manually by clicking on it. Be able to view the details of a recipe and its ingredients.
+
+Test: Be able to go back from list of recipes to categories by pressing BACK button or the toolbar menu -> Categories.
+
+Test: Search for a recipe by typing in a keyword in the search bar up top.
+
+
 
 ## Credits
 Credits to CodingWithMitch for the help in learning to develop an android application using MVVM architecture and Retrofit.
