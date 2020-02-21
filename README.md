@@ -21,13 +21,13 @@ TO DO: Adding a local database cache using Room Persistence Library.
 ## External Dependencies
 
 - [Recipes API](https://recipesapi.herokuapp.com/api/search):
-This is our core API, used to retrieve all the information about recipes.
+<p>This is our core API, used to retrieve all the information about recipes.</p>
 - [Retrofit](https://square.github.io/retrofit/):
-Used to setup a REST API.
+<p>Used to setup a REST API.</p>
 - [Gson](https://github.com/google/gson):
-A Java serialization/deserialization library to convert Java Objects into JSON and back 
+<p>A Java serialization/deserialization library to convert Java Objects into JSON and back </p>
 - [Glide](https://github.com/bumptech/glide):
-Library to display our recipe/food images.
+<p>Library to display our recipe/food images.</p>
 - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
 <p>Library used to make circular image views.</p>
 
