@@ -25,7 +25,7 @@ TO DO: Adding a local database cache using Room Persistence Library.
 - [Retrofit](https://square.github.io/retrofit/)
 </br>Used to setup a REST API.
 - [Gson](https://github.com/google/gson)
-</br>A Java serialization/deserialization library to convert Java Objects into JSON and back </p>
+</br>A Java serialization/deserialization library to convert Java Objects into JSON and back
 - [Glide](https://github.com/bumptech/glide)
 </br>Library to display our recipe/food images.
 - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
