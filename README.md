@@ -32,13 +32,10 @@ TO DO: Adding a local database cache using Room Persistence Library.
 : Library used to make circular image views.
 
 ## Tests
-Test: Select a category by clicking on it. Be able to view the many recipes in a category.
-
-Test: Select a Recipe manually by clicking on it. Be able to view the details of a recipe and its ingredients.
-
-Test: Be able to go back from list of recipes to categories by pressing BACK button or the toolbar menu -> Categories.
-
-Test: Search for a recipe by typing in a keyword in the search bar up top.
+- Test: Select a category by clicking on it. Be able to view the many recipes in a category.
+- Test: Select a Recipe manually by clicking on it. Be able to view the details of a recipe and its ingredients.
+- Test: Be able to go back from list of recipes to categories by pressing BACK button or the toolbar menu -> Categories.
+- Test: Search for a recipe by typing in a keyword in the search bar up top.
 
 
 
