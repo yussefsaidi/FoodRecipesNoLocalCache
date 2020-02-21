@@ -18,16 +18,21 @@ LiveData is retrieved from the Remote Data Source into our repository, then it t
 
 TO DO: Adding a local database cache using Room Persistence Library.
 
-## Technology and libraries
+## External Dependencies
 
-- [Android Studio](https://developer.android.com/studio)
+- [Recipes API](https://recipesapi.herokuapp.com/api/search)
+This is our core API, used to retrieve all the information about recipes.
 - [Retrofit](https://square.github.io/retrofit/)
+Used to setup a REST API.
 - [Gson](https://github.com/google/gson)
+A Java serialization/deserialization library to convert Java Objects into JSON and back 
 - [Glide](https://github.com/bumptech/glide)
+Library to display our recipe/food images.
 - [CircleImageView](https://github.com/hdodenhof/CircleImageView)
+Library used to make circular image views.
 
 ## API Reference
-- [Recipes API](https://recipesapi.herokuapp.com/api/search)
+
 
 
 
